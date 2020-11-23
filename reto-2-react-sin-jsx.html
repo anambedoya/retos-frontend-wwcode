@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX just js</title>
+    <script src="https://unpkg.com/react@16.8.6/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone@7.9.6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+<script type="text/babel">
+
+    const rootElement = document.getElementById('root')
+
+    const element = React.createElement(
+        'div',
+        {className: 'container'},
+        React.createElement('h1', null, 'Cosas que amo'),
+        React.createElement('ul', null,
+            React.createElement('li', null, 'Amo el código'),
+            React.createElement('li', null, 'Amo bailar'),
+            React.createElement('li', null, 'Amo NO cocinar')
+        )
+    );
+
+    ReactDOM.render(element, rootElement);
+    
+</script>
+</html>
