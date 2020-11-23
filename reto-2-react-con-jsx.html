@@ -18,16 +18,15 @@
 
     const rootElement = document.getElementById('root');
 
-    const element = React.createElement(
-        'div',
-        {className: 'container'},
-        React.createElement('h1', null, 'Cosas que amo'),
-        React.createElement('ul', null,
-            React.createElement('li', null, 'Amo el código'),
-            React.createElement('li', null, 'Amo bailar'),
-            React.createElement('li', null, 'Amo NO cocinar')
-        )
-    );
+    const element = 
+        <div className="container">
+            <h1>Cosas que amo</h1>
+            <ul>
+                <li>Amo el código</li>
+                <li>Amo bailar</li>
+                <li>Amo NO cocinar</li>
+            </ul>
+        </div>
 
     ReactDOM.render(element, rootElement);
 
